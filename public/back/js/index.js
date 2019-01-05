@@ -5,28 +5,32 @@ $(function(){
         // 指定图表的配置项和数据
         var option1 = {
             title: {
-                text: 'ECharts 入门示例'
+                text: '2019年注册人数'
             },
             tooltip: {},
             legend: {
-                data:['销量']
+                data:['销量','人数']
             },
             xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                data: ["1月","2月","3月","4月","5月","6月"]
             },
             yAxis: {},
             series: [{
                 name: '销量',
                 type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
+                data: [100, 200, 400, 200, 400, 300]
+            },{
+                name: '人数',
+                type: 'bar',
+                data: [302, 220, 600, 100, 500, 200]
             }]
         };
 
      
         option2 = {
             title : {
-                text: '某站点用户访问来源',
-                subtext: '纯属虚构',
+                text: '热门品牌销售',
+                subtext: '2019年1月',
                 x:'center'
             },
             tooltip : {
@@ -40,22 +44,22 @@ $(function(){
             },
             series : [
                 {
-                    name: '访问来源',
+                    name: '品牌热卖',
                     type: 'pie',
                     radius : '55%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:335, name:'直接访问'},
-                        {value:310, name:'邮件营销'},
-                        {value:234, name:'联盟广告'},
-                        {value:135, name:'视频广告'},
-                        {value:1548, name:'搜索引擎'}
+                        {value:335, name:'耐克'},
+                        {value:310, name:'阿迪'},
+                        {value:234, name:'犀牛'},
+                        {value:135, name:'安踏'},
+                        {value:1548, name:'特步'}
                     ],
                     itemStyle: {
                         emphasis: {
-                            shadowBlur: 10,
+                            shadowBlur: 100,
                             shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            shadowColor: 'yellow'
                         }
                     }
                 }
