@@ -90,13 +90,11 @@
                                     <!-- 挖个坑 -->
                                 </ul>
                             </div>
-
-                            <input type="hidden" name='brandName'>
-
+                            <input type="hidden" name="categoryId">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name='categoryId' class="form-control" placeholder="请输入二级分类名称">
+                            <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类名称">
                         </div>
 
                         <div class="form-group">
@@ -104,10 +102,9 @@
                             <input type="file" name='pic1' id='fileupload' data-url='/category/addSecondCategoryPic'
                                 style='display:none'>
                         </div>
-
                         <div class="form-group" id='imgBox' >
                             <img style="width:100px;"  src="./images/default.png" alt="">
-                            <input type="hidden" name='brandLogo'>
+                            <input type="hidden" name="brandLogo">
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -150,14 +147,14 @@
                 <td>{{ i + 1 + (page -1) * size}}</td>
                 <td>{{v.categoryName}}</td>
                 <td>{{v.brandName}}</td>
-                <td><img style='height:50px;' src={{v.brandLogo}} alt=""></td>
+                <td><img style='height:50px;' src="{{v.brandLogo}}" alt=""></td>
           </tr>
       {{/each}}
     </script>
 
     <script type='text/html' id='dropdownTpl'>
       {{each rows v i}}
-        <li><a href="#">{{v.categoryName}}</a></li>
+        <li ><a data-id='{{ v.id }}' href="#">{{v.categoryName}}</a></li>
       {{/each}}
     </script>
 
